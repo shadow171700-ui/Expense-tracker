@@ -49,26 +49,26 @@ export default function Dashboard({ expense = [] }) {
       <div className="dashboard-cards">
         <div className="dashboard-card">
           <p>Total Income</p>
-          <h3>${totalIncome.toFixed(2)}</h3>
+          <h3>₹{totalIncome.toFixed(2)}</h3>
         </div>
 
         <div className="dashboard-card">
           <p>Total Expense</p>
-          <h3>${totalExpense.toFixed(2)}</h3>
+          <h3>₹{totalExpense.toFixed(2)}</h3>
         </div>
 
         <div className="dashboard-card">
           <p>Balance</p>
-          <h3>${balance.toFixed(2)}</h3>
+          <h3>₹{balance.toFixed(2)}</h3>
         </div>
 
         <div className="dashboard-card">
           <p>Latest</p>
           <h3>
             {latestExpense
-              ? `${latestExpense.description} - $${Number(latestExpense.amount || 0).toFixed(2)}`
+              ? `${latestExpense.description} - ₹${Number(latestExpense.amount || 0).toFixed(2)}`
               : latestIncome
-                ? `${latestIncome.description} - $${Number(latestIncome.amount || 0).toFixed(2)}`
+                ? `${latestIncome.description} - ₹${Number(latestIncome.amount || 0).toFixed(2)}`
                 : "No data"}
           </h3>
         </div>
@@ -91,7 +91,7 @@ export default function Dashboard({ expense = [] }) {
                   style={{ background: categoryColors[category] || "#94a3b8" }}
                 />
                 <span>{category}</span>
-                <strong style={{ marginLeft: "auto" }}>${value.toFixed(2)}</strong>
+                <strong style={{ marginLeft: "auto" }}>₹{value.toFixed(2)}</strong>
               </div>
             ))}
           </div>
