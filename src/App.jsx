@@ -45,6 +45,23 @@ function App() {
       <div className="expense-list">
         <ExpenseList expenses={expense} onDelete={onDelete} edit={startEdit} />
       </div>
+
+      <footer className="portfolio-footer">
+        <div className="portfolio-footer-brand">
+          <span className="portfolio-footer-label">Created by Shadow</span>
+          <span className="footer-divider">|</span>
+          <span className="footer-copyright">© 2026 All rights reserved</span>
+        </div>
+
+        <a
+          className="portfolio-footer-link"
+          href="https://shadow171700-ui.github.io/Portfolio/?utm_source=chatgpt.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Portfolio
+        </a>
+      </footer>
     </div>
   );
 }
